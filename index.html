@@ -1,19 +1,192 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
-  <title>My Resume</title>
+    <title>Josh Cirre - Digital Resume</title>
 
-  <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-<body>
-  <h1>My Resume</h1>
-</body>
+  <body>
+    <div class="container">
+      <div class="two-column">
+        <img src="./images/joshcirre.svg" alt="my-face" />
+      </div>
+      <div class="right-column">
+        <header>
+          <h1 class="title">Josh Cirre</h1>
+          <nav>
+            <li>
+              <ul>
+                <a href="#">Home</a>
+              </ul>
+              <ul>
+                <a href="#intro">About Me</a>
+              </ul>
+              <ul>
+                <a href="#experience">Experience</a>
+              </ul>
+              <ul>
+                <a href="#contact">Contact</a>
+              </ul>
+            </li>
+          </nav>
+        </header>
+        <div class="intro" id="intro">
+          <p>
+            I’m
+            <a class="link" href="http://twitter.com/joshcirre">@joshcirre</a>,
+            a developer, teacher, and current Lambda School student with a
+            passion for creativity, design, and problem-solving.
+          </p>
+          <p>
+            I’m also a worship leader and founder of
+            <a class="link" href="http://worship.dev">WorshipDev</a> with a
+            heart for training others to develop better technical and creative
+            web skills in a church setting.
+          </p>
+          <p>
+            I write about what I’m learning, have a few side projects, and
+            <a href="http://worship.dev/#podcast" class="link"
+              >host a podcast.</a
+            >
+          </p>
+        </div>
+        <section class="skills">
+          <h1>## Skills</h1>
+          <ul>
+            <li>Front-End Design</li>
+            <li>Javascript</li>
+            <li>PHP / Laravel</li>
+            <li>JAMStack</li>
+          </ul>
+        </section>
+        <section class="work-history" id="experience">
+          <h1>## Work Experience</h1>
+          <div class="experience">
+            <ul>
+              <li>
+                <h2 class="company">
+                  Prepress Support Representative, Packlane
+                </h2>
+                <p class="job-length">
+                  August/2017 - present - Remote, US
+                </p>
+                <div class="job-description">
+                  <p>
+                    → Reviewed artwork files from over 20 customers daily,
+                    giving print advice and support when needed.
+                  </p>
+
+                  <p>
+                    → Contributed to Prepress Support documentation, including
+                    reporting detailed bugs and technical problems which
+                    affected daily workflow.
+                  </p>
+                  <p>
+                    → Resolved and closed over 250 tickets each month relating
+                    to current orders.
+                  </p>
+                  <p>
+                    → Provided support via phone, live chat, email tickets, and
+                    video recordings.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <h2 class="company">
+                  Communications Director, Cornerstone Community Church
+                </h2>
+                <p class="job-length">
+                  June/2016 - May/2017 - Greeley, CO
+                </p>
+                <div class="job-description">
+                  <p>
+                    → Designed, launched, and maintained a Wordpress homepage
+                    from scratch.
+                  </p>
+
+                  <p>
+                    → Compiled, edited, and published print and digital content
+                    and video for weekly services and events.
+                  </p>
+                  <p>
+                    → Created onboarding material for future staff members
+                    including training videos and courses for any technology
+                    used on the church campus.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <h2 class="company">
+                  Web Content Support Lead, Moody Radio
+                </h2>
+                <p class="job-length">
+                  October/2013 - May/2016 - Chicago, IL
+                </p>
+                <div class="job-description">
+                  <p>
+                    → Created and edited online copy for Moody Radio’s different
+                    programs and stations, including over 800 unique content
+                    blocks per month.
+                  </p>
+
+                  <p>
+                    → Led a team that launched a complete overhaul and re-design
+                    for the front-end of Moody Radio’s website, catering to over
+                    1m users and expanding growth and viewership by 23%.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="contact-form" id="contact">
+          <h1>## Get in Touch With Me</h1>
+            <form action="#" name="contact_form">
+              <label for="first_name">First Name</label>
+              <input
+                name="first_name"
+                type="text"
+                required
+                placeholder="John"
+              />
+              <br />
+              <label for="last_name">Last Name</label>
+              <input name="last_name" type="text" required placeholder="Doe" />
+              <br />
+              <label for="email">Email</label>
+              <input
+                name="email"
+                type="email"
+                required
+                placeholder="you@domain.com"
+              />
+              <br />
+              <label for="message">Message</label><br />
+              <textarea
+                name="message"
+                cols="30"
+                rows="10"
+                placeholder="Enter your message here ..."
+                required
+              >
+              </textarea>
+              <div class="center">
+                <input type="submit" value="Submit" />
+              </div>
+        </section>
+      </div>
+    </div>
+  </body>
 </html>

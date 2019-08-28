@@ -4,56 +4,285 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
+@bg-color: #fcf8ec;
+@primary: #3ac191;
+@font-stack: 'Roboto', sans-serif;
+.font-link {
+  font-family: @font-stack;
+  font-weight: 700;
+  color: @primary;
+}
+
+.font-heading {
+  font-family: @font-stack;
+  font-weight: 900;
+  color: @primary;
+  font-size: 48px;
+}
+
+.font-nav {
+  font-family: @font-stack;
+  font-weight: 300;
+  color: #000000;
+}
+
+.font-body {
+  font-family: @font-stack;
+  font-weight: 400;
+  color: #000000;
+}
+
+html {
+  background-color: @bg-color;
+}
+
+.container {
+  display: flex;
+  width: 60%;
+  margin: 0px auto;
+
+  .link {
+    .font-link();
+  }
+
+  .two-column {
+    width: 20%;
+    margin-top: 20px;
+    img {
+      width: 100px;
+      height: auto;
+      margin-top: 5px;
+    }
+  }
+  .right-column {
+    margin-top: 40px;
+  }
+  .title {
+    .font-heading();
+  }
+
+  .name {
+    display: flex;
+    align-items: center;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    margin: 0px auto;
+  }
+  nav li {
+    list-style-type: none;
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    a {
+      margin-right: 40px;
+      .font-nav();
+      text-decoration: none;
+    }
+  }
+  .intro {
+    .font-body();
+    margin-top: 60px;
+    width: 80%;
+    p {
+      margin-top: 20px;
+    }
+  }
+  .skills {
+    .font-body();
+    margin-top: 80px;
+    h1 {
+      font-size: 20px;
+      font-weight: 900;
+      color: @primary;
+    }
+    ul {
+      margin-top: 20px;
+      list-style-type: circle;
+      list-style-position: inside;
+      li {
+        padding: 5px 10px;
+        background-color: #eeeeee;
+        border: 1px solid #dddddd;
+      }
+    }
+  }
+  .work-history {
+    .font-body();
+    margin-top: 90px;
+    h1 {
+      font-size: 20px;
+      font-weight: 900;
+      color: @primary;
+    }
+    .company {
+      font-weight: 700;
+      margin-top: 40px;
+    }
+
+    .job-length {
+      font-weight: 300;
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    .job-description p {
+      margin-top: 20px;
+    }
+    .job-description {
+      margin-bottom: 40px;
+    }
+
+    .experience {
+      margin-top: 20px;
+    }
+  }
+
+  .contact-form h1 {
+    .font-body();
+    font-size: 20px;
+    font-weight: 900;
+    color: @primary;
+    margin-top: 90px;
+  }
+}
