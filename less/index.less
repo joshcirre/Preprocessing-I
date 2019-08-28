@@ -173,7 +173,7 @@ html {
 
 .container {
   display: flex;
-  width: 60%;
+  width: 80%;
   margin: 0px auto;
 
   .link {
@@ -181,16 +181,23 @@ html {
   }
 
   .two-column {
-    width: 20%;
+    width: 200px;
     margin-top: 20px;
+    @media (max-width: 500px) {
+      display: none;
+    }
     img {
-      width: 100px;
+      width: 140px;
       height: auto;
       margin-top: 5px;
     }
   }
   .right-column {
-    margin-top: 40px;
+    margin-top: 60px;
+    width: 70%;
+    @media (max-width: 500px) {
+      width: 100%;
+    }
   }
   .title {
     .font-heading();
@@ -218,6 +225,9 @@ html {
       margin-right: 40px;
       .font-nav();
       text-decoration: none;
+      @media (max-width: 500px) {
+        margin-right: 20px;
+      }
     }
   }
   .intro {
@@ -242,8 +252,8 @@ html {
       list-style-position: inside;
       li {
         padding: 5px 10px;
-        background-color: #eeeeee;
-        border: 1px solid #dddddd;
+        background-color: #dddddd;
+        border: 4px solid @bg-color;
       }
     }
   }
